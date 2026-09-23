@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSL 2026/27 · percorsi di Formazione Scuola-Lavoro</title>
+<meta name="description" content="I percorsi di Formazione Scuola-Lavoro per le classi quarte e quinte — Liceo Classico Vittorio Alfieri, a.s. 2026/27.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --cream:#f7f3ec;--cream-dark:#ede8df;--ink:#1c1a16;--ink-soft:#4a4640;--ink-faint:#8a8480;
+  --gold:#c09a4a;--gold-light:#f0e6cc;--border:rgba(28,26,22,.12);--shadow:0 4px 24px rgba(28,26,22,.08);
+  --ff-head:'Playfair Display',Georgia,serif;--ff-body:'Lora',Georgia,serif;
+  --ff-mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --scuro:var(--ink);--medio:var(--ink-soft);--chiaro:var(--cream-dark);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--ff-body);font-size:16px;line-height:1.7}
+
+.masthead{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.masthead::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 60% at 12% 45%,rgba(140,42,42,.34) 0%,transparent 60%),
+  radial-gradient(ellipse 55% 75% at 52% 85%,rgba(31,56,100,.34) 0%,transparent 60%),
+  radial-gradient(ellipse 60% 80% at 90% 40%,rgba(30,77,53,.34) 0%,transparent 60%)}
+.masthead-inner{position:relative;max-width:1100px;margin:0 auto;padding:64px 40px 52px;
+  display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px}
+.masthead-kicker{font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px}
+.masthead h1{font-family:var(--ff-head);font-size:clamp(38px,6.6vw,74px);font-weight:900;line-height:1;letter-spacing:-.01em}
+.masthead h1 em{font-style:italic;color:var(--gold)}
+.masthead-sub{margin-top:16px;font-size:15px;font-style:italic;color:rgba(247,243,236,.65);max-width:520px}
+.masthead-meta{text-align:right;font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;
+  color:rgba(247,243,236,.5);line-height:2;white-space:nowrap}
+.masthead-meta strong{color:var(--gold);display:block;font-size:24px;letter-spacing:-.01em;
+  font-family:var(--ff-head);font-weight:700;margin-bottom:4px}
+.banda{position:relative;display:flex;height:4px}
+.banda span{flex:1}
+
+.nav-bar{position:sticky;top:0;z-index:100;background:var(--ink);
+  border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}
+.nav-bar::-webkit-scrollbar{display:none}
+.nav-inner{display:flex;width:max-content;margin:0 auto}
+.nav-btn{padding:14px 20px;font-family:var(--ff-mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(247,243,236,.5);border:none;background:none;cursor:pointer;
+  border-bottom:3px solid transparent;white-space:nowrap;transition:color .2s}
+.nav-btn:hover{color:var(--c)}
+.nav-btn.active{color:var(--c);border-color:var(--c)}
+.nav-btn:focus-visible{outline:2px solid var(--c);outline-offset:-5px}
+
+.notice-bar{background:var(--gold-light);border-bottom:1px solid var(--gold);padding:11px 40px;
+  text-align:center;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-soft)}
+.notice-bar strong{color:var(--ink)}
+
+.main{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+.cerca{padding:32px 0 0}
+.cerca input{width:100%;font-family:var(--ff-body);font-size:15px;padding:12px 16px;
+  border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--ink)}
+.cerca input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.nessuno{margin-top:36px;font-style:italic;color:var(--ink-faint)}
+
+.area{scroll-margin-top:60px}
+.section-header{padding:52px 0 26px;display:grid;grid-template-columns:auto 1fr;gap:20px;
+  align-items:start;border-bottom:1px solid var(--border);margin-bottom:34px}
+.section-stripe{width:5px;min-height:58px;border-radius:3px;background:linear-gradient(180deg,var(--scuro),var(--medio))}
+.section-label{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:6px;color:var(--medio)}
+.section-title{font-family:var(--ff-head);font-size:clamp(22px,3vw,32px);font-weight:700;line-height:1.2}
+.section-desc{margin-top:6px;font-size:14px;font-style:italic;color:var(--ink-faint)}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+.card{background:#fff;border-radius:4px;border:1px solid var(--border);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .25s,transform .25s}
+.js .card{opacity:0;transform:translateY(18px)}
+.js .card.visible{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease,box-shadow .25s}
+.card:hover,.js .card.visible:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(28,26,22,.13)}
+.card.hidden{display:none}
+.card-top{height:5px;flex-shrink:0;background:linear-gradient(90deg,var(--scuro),var(--medio))}
+.card-body{padding:24px 24px 18px;flex:1;display:flex;flex-direction:column;gap:14px}
+.card-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;white-space:nowrap}
+.tag-codice{background:var(--scuro);color:#fff}
+.tag-ore{background:var(--chiaro);color:var(--scuro)}
+.tag-periodo{background:var(--cream-dark);color:var(--ink-soft)}
+.card-title{font-family:var(--ff-head);font-size:22px;font-weight:700;line-height:1.18}
+.card-divider{height:1px;background:var(--border)}
+.card-desc{font-size:14.5px;line-height:1.8;color:var(--ink-soft);flex:1}
+.card-desc p+p{margin-top:.7em}
+.card-desc em{font-style:italic;color:var(--ink)}
+.card-foot{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);border-top:1px dashed var(--border);padding-top:11px}
+
+.info{margin-top:64px;padding:34px 36px;background:var(--ink);border-radius:4px;color:var(--cream)}
+.info h3{font-family:var(--ff-head);font-size:19px;font-weight:700;font-style:italic;color:var(--gold);margin-bottom:22px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.passo{border-left:3px solid var(--gold);padding-left:15px}
+.passo-n{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px}
+.passo p{font-size:13.5px;line-height:1.7;color:rgba(247,243,236,.82)}
+.passo p+p{margin-top:.6em}
+.info-contatto{margin-top:24px;padding-top:18px;border-top:1px solid rgba(247,243,236,.15);
+  font-size:13px;color:rgba(247,243,236,.62)}
+.info-contatto a{color:var(--gold)}
+
+footer{text-align:center;padding:32px 20px;font-family:var(--ff-mono);font-size:11px;
+  letter-spacing:.08em;color:var(--ink-faint);border-top:1px solid var(--border)}
+
+@media(max-width:760px){.info-grid{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .masthead-inner{grid-template-columns:1fr;padding:44px 20px 36px}
+  .masthead-meta{text-align:left}
+  .main{padding:0 16px 60px}
+  .notice-bar{padding:10px 16px;text-align:left}
+  .nav-btn{padding:12px 14px;font-size:10px}
+  .info{padding:26px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .card{opacity:1;transform:none}
+  .card,.card:hover,.js .card.visible,.js .card.visible:hover{transition:none;transform:none}
+}
+@media print{
+  .nav-bar,.cerca,.notice-bar{display:none}
+  .card{break-inside:avoid;box-shadow:none}
+  .masthead::before{display:none}
+}
+.a-ART{--scuro:#8c2a2a;--medio:#b84040;--chiaro:#f8efef}
+.a-CUL{--scuro:#5a2d6e;--medio:#7b4b90;--chiaro:#f3eef6}
+.a-ECO{--scuro:#1f3864;--medio:#36598f;--chiaro:#edf1f8}
+.a-EDU{--scuro:#8f4a17;--medio:#b8662b;--chiaro:#faf1e9}
+.a-MED{--scuro:#0f5c61;--medio:#2b8187;--chiaro:#eaf5f5}
+.a-SCI{--scuro:#1e4d35;--medio:#2e7050;--chiaro:#edf5f0}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-kicker">Liceo Classico Vittorio Alfieri · a.s. 2026/27</div>
+      <h1>Percorsi <em>FSL</em></h1>
+      <p class="masthead-sub">Formazione Scuola-Lavoro · classi quarte e quinte</p>
+    </div>
+    <div class="masthead-meta">
+      <strong>16</strong>
+      percorsi da leggere<br>
+      6 aree tematiche<br>
+      270 posti in tutto
+    </div>
+  </div>
+  <div class="banda"><span style="background:#b84040"></span><span style="background:#7b4b90"></span><span style="background:#36598f"></span><span style="background:#b8662b"></span><span style="background:#2b8187"></span><span style="background:#2e7050"></span></div>
+</header>
+
+<nav class="nav-bar"><div class="nav-inner">
+    <button class="nav-btn active" style="--c:var(--gold)" onclick="filtra('all',this)">Tutti</button>
+    <button class="nav-btn" style="--c:#b84040" onclick="filtra('ART',this)">Artistica</button>
+    <button class="nav-btn" style="--c:#7b4b90" onclick="filtra('CUL',this)">Culturale</button>
+    <button class="nav-btn" style="--c:#36598f" onclick="filtra('ECO',this)">Economico-giuridica</button>
+    <button class="nav-btn" style="--c:#b8662b" onclick="filtra('EDU',this)">Educativa</button>
+    <button class="nav-btn" style="--c:#2b8187" onclick="filtra('MED',this)">Medico-sanitaria</button>
+    <button class="nav-btn" style="--c:#2e7050" onclick="filtra('SCI',this)">Scientifica</button>
+</div></nav>
+
+<div class="notice-bar">
+  Leggi le schede, poi compila il modulo con il <strong>link personale</strong> che hai ricevuto per email · Indica <strong>tre percorsi</strong> in ordine di preferenza
+</div>
+
+<main class="main">
+  <div class="cerca">
+    <input type="search" id="cerca" oninput="applica()" aria-label="Cerca un percorso"
+           placeholder="Cerca per titolo, codice o parola chiave">
+  </div>
+  <p class="nessuno" id="nessuno" hidden>Nessun percorso corrisponde alla ricerca.</p>
+
+  <section class="area a-ART" data-area="ART" id="art">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">ART</div>
+        <h2 class="section-title">Area artistica</h2>
+        <div class="section-desc">3 percorsi · 37 posti · da 20 a 30 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="ART" data-testo="art-01 dietro le quinte di un teatro artistica un teatro visto dal lato che il pubblico non vede: produzione, regia, luci, ufficio stampa. gli studenti affiancano la compagnia nelle settimane che precedono uno spettacolo e ne curano la comunicazione. gennaio – marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ART-01</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio – marzo</span></div>
+          <h3 class="card-title">Dietro le quinte di un teatro</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Un teatro visto dal lato che il pubblico non vede: produzione, regia, luci, ufficio stampa. Gli studenti affiancano la compagnia nelle settimane che precedono uno spettacolo e ne curano la comunicazione.</p></div>
+          <div class="card-foot">15 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="ART" data-testo="art-02 bottega di restauro artistica in un laboratorio di restauro si impara che cosa succede a un dipinto prima che torni in una sala: diagnostica, pulitura, documentazione. si lavora su materiali di prova, non su opere. febbraio – aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ART-02</span><span class="tag tag-ore">25 ore</span><span class="tag tag-periodo">febbraio – aprile</span></div>
+          <h3 class="card-title">Bottega di restauro</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>In un laboratorio di restauro si impara che cosa succede a un dipinto prima che torni in una sala: diagnostica, pulitura, documentazione. Si lavora su materiali di prova, non su opere.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="ART" data-testo="art-03 fotografia di scena artistica dalla luce all&#39;archivio: come si fotografa una prova aperta e come si costruisce la cartella stampa di uno spettacolo. marzo – maggio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ART-03</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">marzo – maggio</span></div>
+          <h3 class="card-title">Fotografia di scena</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Dalla luce all&#39;archivio: come si fotografa una prova aperta e come si costruisce la cartella stampa di uno spettacolo.</p></div>
+          <div class="card-foot">12 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-CUL" data-area="CUL" id="cul">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">CUL</div>
+        <h2 class="section-title">Area culturale</h2>
+        <div class="section-desc">3 percorsi · 42 posti · da 30 a 40 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="CUL" data-testo="cul-01 mediazione museale culturale progettare e condurre visite guidate per bambini e famiglie: studio delle collezioni, scrittura dei testi, prova sul campo con il pubblico della domenica. novembre – febbraio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">CUL-01</span><span class="tag tag-ore">40 ore</span><span class="tag tag-periodo">novembre – febbraio</span></div>
+          <h3 class="card-title">Mediazione museale</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Progettare e condurre visite guidate per bambini e famiglie: studio delle collezioni, scrittura dei testi, prova sul campo con il pubblico della domenica.</p></div>
+          <div class="card-foot">20 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="CUL" data-testo="cul-02 il libro antico in biblioteca culturale catalogazione, conservazione e descrizione di edizioni antiche. si impara a leggere un frontespizio come si legge una carta d&#39;identita. il percorso si chiude con una piccola mostra: dal magazzino alla vetrina. gennaio – marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">CUL-02</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio – marzo</span></div>
+          <h3 class="card-title">Il libro antico in biblioteca</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Catalogazione, conservazione e descrizione di edizioni antiche. Si impara a leggere un frontespizio come si legge una carta d&#39;identità.</p><p>Il percorso si chiude con una piccola mostra: <em>dal magazzino alla vetrina</em>.</p></div>
+          <div class="card-foot">12 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="CUL" data-testo="cul-03 archivio storico cittadino culturale riordino e schedatura di un fondo novecentesco, con una relazione finale che diventa strumento di consultazione per chi verra dopo. ottobre – gennaio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">CUL-03</span><span class="tag tag-ore">35 ore</span><span class="tag tag-periodo">ottobre – gennaio</span></div>
+          <h3 class="card-title">Archivio storico cittadino</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Riordino e schedatura di un fondo novecentesco, con una relazione finale che diventa strumento di consultazione per chi verrà dopo.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-ECO" data-area="ECO" id="eco">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">ECO</div>
+        <h2 class="section-title">Area economico-giuridica</h2>
+        <div class="section-desc">3 percorsi · 63 posti · da 20 a 40 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="ECO" data-testo="eco-01 un giorno in tribunale economico-giuridica udienze civili e penali, incontro con magistrati e avvocati, e infine la simulazione di un processo con ruoli assegnati. novembre – gennaio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ECO-01</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">novembre – gennaio</span></div>
+          <h3 class="card-title">Un giorno in tribunale</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Udienze civili e penali, incontro con magistrati e avvocati, e infine la simulazione di un processo con ruoli assegnati.</p></div>
+          <div class="card-foot">25 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="ECO" data-testo="eco-02 impresa simulata economico-giuridica dall&#39;idea al bilancio di previsione: costituzione di un&#39;impresa simulata, piano economico, presentazione finale davanti a una commissione. ottobre – marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ECO-02</span><span class="tag tag-ore">40 ore</span><span class="tag tag-periodo">ottobre – marzo</span></div>
+          <h3 class="card-title">Impresa simulata</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Dall&#39;idea al bilancio di previsione: costituzione di un&#39;impresa simulata, piano economico, presentazione finale davanti a una commissione.</p></div>
+          <div class="card-foot">20 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="ECO" data-testo="eco-03 educazione finanziaria di base economico-giuridica contratti, risparmio, credito, truffe online: gli strumenti minimi per non arrivare impreparati al primo conto corrente. febbraio – aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ECO-03</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">febbraio – aprile</span></div>
+          <h3 class="card-title">Educazione finanziaria di base</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Contratti, risparmio, credito, truffe online: gli strumenti minimi per non arrivare impreparati al primo conto corrente.</p></div>
+          <div class="card-foot">18 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-EDU" data-area="EDU" id="edu">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">EDU</div>
+        <h2 class="section-title">Area educativa e del terzo settore</h2>
+        <div class="section-desc">2 percorsi · 35 posti · da 30 a 40 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="EDU" data-testo="edu-01 doposcuola nelle primarie educativa e del terzo settore affiancamento dei bambini nei compiti del pomeriggio, in una scuola primaria del quartiere. richiede costanza: e un impegno settimanale fisso. novembre – aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">EDU-01</span><span class="tag tag-ore">40 ore</span><span class="tag tag-periodo">novembre – aprile</span></div>
+          <h3 class="card-title">Doposcuola nelle primarie</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Affiancamento dei bambini nei compiti del pomeriggio, in una scuola primaria del quartiere. Richiede costanza: è un impegno settimanale fisso.</p></div>
+          <div class="card-foot">20 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="EDU" data-testo="edu-02 volontariato con gli anziani educativa e del terzo settore letture ad alta voce, laboratori di memoria e accompagnamento in una residenza per anziani, con formazione iniziale a cura degli operatori. dicembre – marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">EDU-02</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">dicembre – marzo</span></div>
+          <h3 class="card-title">Volontariato con gli anziani</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Letture ad alta voce, laboratori di memoria e accompagnamento in una residenza per anziani, con formazione iniziale a cura degli operatori.</p></div>
+          <div class="card-foot">15 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-MED" data-area="MED" id="med">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">MED</div>
+        <h2 class="section-title">Area medico-sanitaria</h2>
+        <div class="section-desc">2 percorsi · 45 posti · da 20 a 30 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="MED" data-testo="med-01 orientamento alle professioni sanitarie medico-sanitaria incontri con medici, infermieri e tecnici di laboratorio, visita ai reparti aperti agli studenti e laboratorio di simulazione. gennaio – marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-01</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio – marzo</span></div>
+          <h3 class="card-title">Orientamento alle professioni sanitarie</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Incontri con medici, infermieri e tecnici di laboratorio, visita ai reparti aperti agli studenti e laboratorio di simulazione.</p></div>
+          <div class="card-foot">25 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="MED" data-testo="med-02 primo soccorso e blsd medico-sanitaria corso certificato di primo soccorso e uso del defibrillatore, con esercitazioni pratiche e prova finale. ottobre – dicembre">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-02</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">ottobre – dicembre</span></div>
+          <h3 class="card-title">Primo soccorso e BLSD</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Corso certificato di primo soccorso e uso del defibrillatore, con esercitazioni pratiche e prova finale.</p></div>
+          <div class="card-foot">20 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-SCI" data-area="SCI" id="sci">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">SCI</div>
+        <h2 class="section-title">Area scientifico-tecnologica</h2>
+        <div class="section-desc">3 percorsi · 48 posti · da 25 a 35 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="SCI" data-testo="sci-01 laboratorio di fisica all&#39;universita scientifico-tecnologica una misura vera, dall&#39;inizio alla fine: progetto, presa dati, analisi degli errori, relazione. si lavora in gruppi di tre in un laboratorio didattico universitario. febbraio – aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-01</span><span class="tag tag-ore">35 ore</span><span class="tag tag-periodo">febbraio – aprile</span></div>
+          <h3 class="card-title">Laboratorio di fisica all&#39;università</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Una misura vera, dall&#39;inizio alla fine: progetto, presa dati, analisi degli errori, relazione. Si lavora in gruppi di tre in un laboratorio didattico universitario.</p></div>
+          <div class="card-foot">16 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-02 dati e programmazione scientifico-tecnologica raccolta, pulizia e visualizzazione di dati pubblici con python. nessun prerequisito oltre alla pazienza. gennaio – marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-02</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio – marzo</span></div>
+          <h3 class="card-title">Dati e programmazione</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Raccolta, pulizia e visualizzazione di dati pubblici con Python. Nessun prerequisito oltre alla pazienza.</p></div>
+          <div class="card-foot">18 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-03 divulgazione scientifica scientifico-tecnologica scrivere e raccontare la scienza a chi non la studia: articoli brevi, podcast, una serata aperta al pubblico. marzo – maggio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-03</span><span class="tag tag-ore">25 ore</span><span class="tag tag-periodo">marzo – maggio</span></div>
+          <h3 class="card-title">Divulgazione scientifica</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc"><p>Scrivere e raccontare la scienza a chi non la studia: articoli brevi, podcast, una serata aperta al pubblico.</p></div>
+          <div class="card-foot">14 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="info">
+    <h3>Come si sceglie, e come viene assegnato</h3>
+    <div class="info-grid">
+      <div class="passo">
+        <div class="passo-n">Leggi</div>
+        <p>Guarda tutte le schede, anche quelle delle aree che non avresti considerato. Il codice in alto a sinistra — ART-01 e simili — è quello che ritrovi nel menu del modulo.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">Scegli</div>
+        <p>Nel modulo indichi tre percorsi in ordine di preferenza, tutti diversi. Al secondo e al terzo posto metti percorsi che faresti davvero: capita spesso che tocchino.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">L'assegnazione</div>
+        <p>Riceverai un percorso solo. La scuola cerca prima di tutto di dare a ciascuno uno dei percorsi indicati; fra le distribuzioni che ci riescono sceglie quella con più prime scelte, poi con più seconde. A parità decide un sorteggio registrato, che si può rifare identico.</p>
+        <p>Chi non compila il modulo viene inserito d'ufficio dove restano posti liberi.</p>
+      </div>
+    </div>
+    
+  </div>
+</main>
+
+<footer>Liceo Classico Vittorio Alfieri · Formazione Scuola-Lavoro 2026/27 · pagina aggiornata il 22/09/2026</footer>
+
+<script>
+var areaAttiva = 'all';
+function pulisci(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+function filtra(a,btn){
+  areaAttiva=a;
+  document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.toggle('active',b===btn);});
+  applica();
+}
+function applica(){
+  var campo=document.getElementById('cerca');
+  var q=campo?pulisci(campo.value.trim()):'';
+  var visibili=0;
+  document.querySelectorAll('.card').forEach(function(c){
+    var ok=(areaAttiva==='all'||c.dataset.area===areaAttiva)&&(!q||c.dataset.testo.indexOf(q)>=0);
+    c.classList.toggle('hidden',!ok);
+    if(ok){visibili++;c.classList.add('visible');}
+  });
+  document.querySelectorAll('section.area').forEach(function(s){
+    s.hidden=!s.querySelector('.card:not(.hidden)');
+  });
+  document.getElementById('nessuno').hidden=visibili>0;
+}
+(function(){
+  var carte=document.querySelectorAll('.card');
+  if(!('IntersectionObserver' in window)){
+    carte.forEach(function(c){c.classList.add('visible');});
+    return;
+  }
+  var oss=new IntersectionObserver(function(voci){
+    voci.forEach(function(v){
+      if(!v.isIntersecting)return;
+      var c=v.target;
+      setTimeout(function(){c.classList.add('visible');},Number(c.dataset.ritardo||0));
+      oss.unobserve(c);
+    });
+  },{threshold:0.08});
+  carte.forEach(function(c,i){c.dataset.ritardo=(i%3)*80;oss.observe(c);});
+})();
+</script>
+</body>
+</html>

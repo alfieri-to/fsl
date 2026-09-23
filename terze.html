@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSL 2026/27 · I progetti delle terze — Liceo Classico Vittorio Alfieri</title>
+<meta name="description" content="I progetti di Formazione Scuola-Lavoro delle classi terze del Liceo Classico Vittorio Alfieri, anno scolastico 2026/27.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --cream:#f7f3ec;--cream-dark:#ede8df;--ink:#1c1a16;--ink-soft:#4a4640;--ink-faint:#8a8480;
+  --gold:#c09a4a;--gold-light:#f0e6cc;--border:rgba(28,26,22,.12);--shadow:0 4px 24px rgba(28,26,22,.08);
+  --ff-head:'Playfair Display',Georgia,serif;--ff-body:'Lora',Georgia,serif;
+  --ff-mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --scuro:var(--ink);--medio:var(--ink-soft);--chiaro:var(--cream-dark);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--ff-body);font-size:16px;line-height:1.7}
+a{color:inherit}
+
+.masthead{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.masthead::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 60% at 12% 45%,rgba(140,42,42,.34) 0%,transparent 60%),
+  radial-gradient(ellipse 55% 75% at 52% 85%,rgba(31,56,100,.34) 0%,transparent 60%),
+  radial-gradient(ellipse 60% 80% at 90% 40%,rgba(30,77,53,.34) 0%,transparent 60%)}
+.masthead-inner{position:relative;max-width:1100px;margin:0 auto;padding:64px 40px 52px;
+  display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px}
+.masthead.interna .masthead-inner{padding:38px 40px 30px}
+.masthead-kicker{font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px}
+.masthead.interna .masthead-kicker{margin-bottom:8px}
+.masthead h1{font-family:var(--ff-head);font-size:clamp(38px,6.6vw,74px);font-weight:900;line-height:1;letter-spacing:-.01em}
+.masthead.interna h1{font-size:clamp(28px,4.4vw,46px);font-weight:700}
+.masthead h1 em{font-style:italic;color:var(--gold)}
+.masthead-sub{margin-top:16px;font-size:15px;font-style:italic;color:rgba(247,243,236,.65);max-width:560px}
+.masthead.interna .masthead-sub{margin-top:10px;font-size:14px}
+.masthead-meta{text-align:right;font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;
+  color:rgba(247,243,236,.5);line-height:2;white-space:nowrap}
+.masthead-meta strong{color:var(--gold);display:block;font-size:24px;letter-spacing:-.01em;
+  font-family:var(--ff-head);font-weight:700;margin-bottom:4px}
+.banda{position:relative;display:flex;height:4px}
+.banda span{flex:1}
+
+.nav-sito{position:sticky;top:0;z-index:100;background:var(--ink);
+  border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}
+.nav-sito::-webkit-scrollbar{display:none}
+.nav-sito-inner{display:flex;width:max-content;min-width:100%;max-width:1100px;margin:0 auto}
+.nav-sito a{padding:13px 20px;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.09em;
+  color:rgba(247,243,236,.55);text-decoration:none;border-bottom:3px solid transparent;
+  white-space:nowrap;transition:color .2s}
+.nav-sito a:hover{color:var(--cream)}
+.nav-sito a.qui{color:var(--gold);border-color:var(--gold)}
+.nav-sito a:focus-visible{outline:2px solid var(--gold);outline-offset:-5px}
+
+.notice-bar{background:var(--gold-light);border-bottom:1px solid var(--gold);padding:11px 40px;
+  text-align:center;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-soft)}
+.notice-bar strong{color:var(--ink)}
+
+.main{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+
+.filtri{display:flex;flex-wrap:wrap;gap:8px;padding:30px 0 0}
+.filtro{font-family:var(--ff-mono);padding:7px 15px;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-soft);background:none;cursor:pointer;
+  border:1px solid var(--border);border-radius:2px;transition:all .18s}
+.filtro:hover{border-color:var(--c);color:var(--c)}
+.filtro.active{background:var(--c);border-color:var(--c);color:#fff}
+.filtro:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+.cerca{padding:14px 0 0}
+.cerca input{width:100%;font-family:var(--ff-body);font-size:15px;padding:12px 16px;
+  border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--ink)}
+.cerca input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.nessuno{margin-top:36px;font-style:italic;color:var(--ink-faint)}
+
+.area,.capitolo{scroll-margin-top:60px}
+.section-header{padding:48px 0 24px;display:grid;grid-template-columns:auto 1fr;gap:20px;
+  align-items:start;border-bottom:1px solid var(--border);margin-bottom:30px}
+.section-stripe{width:5px;min-height:52px;border-radius:3px;background:linear-gradient(180deg,var(--scuro),var(--medio))}
+.section-label{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:6px;color:var(--medio)}
+.section-title{font-family:var(--ff-head);font-size:clamp(22px,3vw,31px);font-weight:700;line-height:1.2}
+.section-desc{margin-top:6px;font-size:14px;font-style:italic;color:var(--ink-faint)}
+
+.prosa{max-width:66ch}
+.prosa p{margin-bottom:1.05em}
+.prosa p:last-child{margin-bottom:0}
+.prosa ul{margin:0 0 1.05em 1.2em;padding:0}
+.prosa ul:last-child{margin-bottom:0}
+.prosa li{margin-bottom:.5em;padding-left:.35em}
+.prosa li::marker{color:var(--gold)}
+.prosa em{font-style:italic;color:var(--ink)}
+.prosa .legge{border-left:3px solid var(--gold);padding:1px 0 1px 15px;font-size:14px;
+  font-style:italic;color:var(--ink-faint)}
+.avanti{display:inline-block;margin-top:34px;padding:13px 26px;background:var(--ink);color:var(--cream);
+  text-decoration:none;font-family:var(--ff-mono);font-size:12px;letter-spacing:.1em;border-radius:3px}
+.avanti:hover{background:var(--ink-soft)}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+.cards-grid.larghe{grid-template-columns:repeat(auto-fill,minmax(400px,1fr))}
+.card{background:#fff;border-radius:4px;border:1px solid var(--border);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .25s,transform .25s}
+.js .card{opacity:0;transform:translateY(18px)}
+.js .card.visible{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease,box-shadow .25s}
+.card:hover,.js .card.visible:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(28,26,22,.13)}
+.card.hidden{display:none}
+.card-top{height:5px;flex-shrink:0;background:linear-gradient(90deg,var(--scuro),var(--medio))}
+.card-body{padding:24px 24px 18px;flex:1;display:flex;flex-direction:column;gap:14px}
+.card-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;white-space:nowrap}
+.tag-codice{background:var(--scuro);color:#fff}
+.tag-ore{background:var(--chiaro);color:var(--scuro)}
+.tag-periodo{background:var(--cream-dark);color:var(--ink-soft)}
+.card-title{font-family:var(--ff-head);font-size:22px;font-weight:700;line-height:1.18}
+.card-ente{margin-top:-8px;font-size:13.5px;font-style:italic;color:var(--ink-faint)}
+.card-divider{height:1px;background:var(--border)}
+.card-desc{font-size:14.5px;line-height:1.8;color:var(--ink-soft);flex:1;max-width:none}
+.card-foot{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);border-top:1px dashed var(--border);padding-top:11px}
+
+.info{margin-top:64px;padding:34px 36px;background:var(--ink);border-radius:4px;color:var(--cream)}
+.info h3{font-family:var(--ff-head);font-size:19px;font-weight:700;font-style:italic;color:var(--gold);margin-bottom:22px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.passo{border-left:3px solid var(--gold);padding-left:15px}
+.passo-n{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px}
+.passo p{font-size:13.5px;line-height:1.7;color:rgba(247,243,236,.82)}
+.passo p+p{margin-top:.6em}
+.info-contatto{margin-top:24px;padding-top:18px;border-top:1px solid rgba(247,243,236,.15);
+  font-size:13px;color:rgba(247,243,236,.62)}
+.info-contatto a{color:var(--gold)}
+
+footer{text-align:center;padding:32px 20px;font-family:var(--ff-mono);font-size:11px;
+  letter-spacing:.08em;color:var(--ink-faint);border-top:1px solid var(--border)}
+
+@media(max-width:760px){.info-grid{grid-template-columns:1fr}.cards-grid.larghe{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .masthead-inner,.masthead.interna .masthead-inner{grid-template-columns:1fr;padding:40px 20px 32px}
+  .masthead-meta{text-align:left}
+  .main{padding:0 16px 60px}
+  .notice-bar{padding:10px 16px;text-align:left}
+  .nav-sito a{padding:12px 14px;font-size:10.5px}
+  .info{padding:26px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .card{opacity:1;transform:none}
+  .card,.card:hover,.js .card.visible,.js .card.visible:hover{transition:none;transform:none}
+}
+@media print{
+  .nav-sito,.cerca,.filtri,.notice-bar,.avanti{display:none}
+  .card{break-inside:avoid;box-shadow:none}
+  .masthead::before{display:none}
+  .prosa{max-width:none}
+}
+.a-ART{--scuro:#8c2a2a;--medio:#b84040;--chiaro:#f8efef}
+.a-CUL{--scuro:#5a2d6e;--medio:#7b4b90;--chiaro:#f3eef6}
+.a-ECO{--scuro:#1f3864;--medio:#36598f;--chiaro:#edf1f8}
+.a-EDU{--scuro:#8f4a17;--medio:#b8662b;--chiaro:#faf1e9}
+.a-MED{--scuro:#0f5c61;--medio:#2b8187;--chiaro:#eaf5f5}
+.a-SCI{--scuro:#1e4d35;--medio:#2e7050;--chiaro:#edf5f0}
+</style>
+</head>
+<body>
+
+<header class="masthead interna">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-kicker">Liceo Classico Vittorio Alfieri · a.s. 2026/27</div>
+      <h1>FSL di <em>classe</em></h1>
+      <p class="masthead-sub">I progetti delle terze, decisi dai consigli di classe</p>
+    </div>
+    <div class="masthead-meta">
+      <strong>0</strong>
+      progetti attivi<br>
+      anno scolastico<br>
+      2026/27
+    </div>
+  </div>
+  <div class="banda"><span style="background:#b84040"></span><span style="background:#7b4b90"></span><span style="background:#36598f"></span><span style="background:#b8662b"></span><span style="background:#2b8187"></span><span style="background:#2e7050"></span></div>
+</header>
+
+<nav class="nav-sito"><div class="nav-sito-inner">
+  <a href="index.html" data-pagina="index.html">Che cos&#39;è</a>
+  <a href="regole.html" data-pagina="regole.html">Come funziona</a>
+  <a href="terze.html" data-pagina="terze.html" class="qui" aria-current="page">FSL di classe · terze</a>
+  <a href="percorsi.html" data-pagina="percorsi.html">I percorsi · quarte e quinte</a>
+</div></nav>
+
+<main class="main">
+  <section class="capitolo">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        
+        <h2 class="section-title">Ancora niente da mostrare</h2>
+        
+      </div>
+    </div>
+    <div class="prosa"><p>I progetti di classe si scrivono nel foglio "1b · Progetti di classe": una riga per progetto.</p></div>
+  </section>
+</main>
+
+<footer>Liceo Classico Vittorio Alfieri · Formazione Scuola-Lavoro 2026/27 · pagina aggiornata il 23/09/2026</footer>
+
+<script>
+var areaAttiva = 'all';
+function pulisci(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+function filtra(a,btn){
+  areaAttiva=a;
+  document.querySelectorAll('.filtro').forEach(function(b){b.classList.toggle('active',b===btn);});
+  applica();
+}
+function applica(){
+  var campo=document.getElementById('cerca');
+  var q=campo?pulisci(campo.value.trim()):'';
+  var visibili=0;
+  document.querySelectorAll('.card[data-area]').forEach(function(c){
+    var ok=(areaAttiva==='all'||c.dataset.area===areaAttiva)&&(!q||c.dataset.testo.indexOf(q)>=0);
+    c.classList.toggle('hidden',!ok);
+    if(ok){visibili++;c.classList.add('visible');}
+  });
+  document.querySelectorAll('section.area').forEach(function(s){
+    s.hidden=!s.querySelector('.card:not(.hidden)');
+  });
+  var vuoto=document.getElementById('nessuno');
+  if(vuoto)vuoto.hidden=visibili>0;
+}
+(function(){
+  var carte=document.querySelectorAll('.card');
+  if(!('IntersectionObserver' in window)){
+    carte.forEach(function(c){c.classList.add('visible');});
+    return;
+  }
+  var oss=new IntersectionObserver(function(voci){
+    voci.forEach(function(v){
+      if(!v.isIntersecting)return;
+      var c=v.target;
+      setTimeout(function(){c.classList.add('visible');},Number(c.dataset.ritardo||0));
+      oss.unobserve(c);
+    });
+  },{threshold:0.08});
+  carte.forEach(function(c,i){c.dataset.ritardo=(i%3)*80;oss.observe(c);});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSL 2026/27 · I percorsi — Liceo Classico Vittorio Alfieri</title>
+<meta name="description" content="I percorsi di Formazione Scuola-Lavoro per le classi quarte e quinte — Liceo Classico Vittorio Alfieri, a.s. 2026/27.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --cream:#f7f3ec;--cream-dark:#ede8df;--ink:#1c1a16;--ink-soft:#4a4640;--ink-faint:#8a8480;
+  --gold:#c09a4a;--gold-light:#f0e6cc;--border:rgba(28,26,22,.12);--shadow:0 4px 24px rgba(28,26,22,.08);
+  --ff-head:'Playfair Display',Georgia,serif;--ff-body:'Lora',Georgia,serif;
+  --ff-mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --scuro:var(--ink);--medio:var(--ink-soft);--chiaro:var(--cream-dark);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--ff-body);font-size:16px;line-height:1.7}
+a{color:inherit}
+
+.masthead{background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.masthead::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 60% at 12% 45%,rgba(140,42,42,.34) 0%,transparent 60%),
+  radial-gradient(ellipse 55% 75% at 52% 85%,rgba(31,56,100,.34) 0%,transparent 60%),
+  radial-gradient(ellipse 60% 80% at 90% 40%,rgba(30,77,53,.34) 0%,transparent 60%)}
+.masthead-inner{position:relative;max-width:1100px;margin:0 auto;padding:64px 40px 52px;
+  display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px}
+.masthead.interna .masthead-inner{padding:38px 40px 30px}
+.masthead-kicker{font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px}
+.masthead.interna .masthead-kicker{margin-bottom:8px}
+.masthead h1{font-family:var(--ff-head);font-size:clamp(38px,6.6vw,74px);font-weight:900;line-height:1;letter-spacing:-.01em}
+.masthead.interna h1{font-size:clamp(28px,4.4vw,46px);font-weight:700}
+.masthead h1 em{font-style:italic;color:var(--gold)}
+.masthead-sub{margin-top:16px;font-size:15px;font-style:italic;color:rgba(247,243,236,.65);max-width:560px}
+.masthead.interna .masthead-sub{margin-top:10px;font-size:14px}
+.masthead-meta{text-align:right;font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;
+  color:rgba(247,243,236,.5);line-height:2;white-space:nowrap}
+.masthead-meta strong{color:var(--gold);display:block;font-size:24px;letter-spacing:-.01em;
+  font-family:var(--ff-head);font-weight:700;margin-bottom:4px}
+.banda{position:relative;display:flex;height:4px}
+.banda span{flex:1}
+
+.nav-sito{position:sticky;top:0;z-index:100;background:var(--ink);
+  border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}
+.nav-sito::-webkit-scrollbar{display:none}
+.nav-sito-inner{display:flex;width:max-content;min-width:100%;max-width:1100px;margin:0 auto}
+.nav-sito a{padding:13px 20px;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.09em;
+  color:rgba(247,243,236,.55);text-decoration:none;border-bottom:3px solid transparent;
+  white-space:nowrap;transition:color .2s}
+.nav-sito a:hover{color:var(--cream)}
+.nav-sito a.qui{color:var(--gold);border-color:var(--gold)}
+.nav-sito a:focus-visible{outline:2px solid var(--gold);outline-offset:-5px}
+
+.notice-bar{background:var(--gold-light);border-bottom:1px solid var(--gold);padding:11px 40px;
+  text-align:center;font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-soft)}
+.notice-bar strong{color:var(--ink)}
+
+.main{max-width:1100px;margin:0 auto;padding:0 24px 80px}
+
+.filtri{display:flex;flex-wrap:wrap;gap:8px;padding:30px 0 0}
+.filtro{font-family:var(--ff-mono);padding:7px 15px;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-soft);background:none;cursor:pointer;
+  border:1px solid var(--border);border-radius:2px;transition:all .18s}
+.filtro:hover{border-color:var(--c);color:var(--c)}
+.filtro.active{background:var(--c);border-color:var(--c);color:#fff}
+.filtro:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+.cerca{padding:14px 0 0}
+.cerca input{width:100%;font-family:var(--ff-body);font-size:15px;padding:12px 16px;
+  border:1px solid var(--border);border-radius:4px;background:#fff;color:var(--ink)}
+.cerca input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.nessuno{margin-top:36px;font-style:italic;color:var(--ink-faint)}
+
+.area,.capitolo{scroll-margin-top:60px}
+.section-header{padding:48px 0 24px;display:grid;grid-template-columns:auto 1fr;gap:20px;
+  align-items:start;border-bottom:1px solid var(--border);margin-bottom:30px}
+.section-stripe{width:5px;min-height:52px;border-radius:3px;background:linear-gradient(180deg,var(--scuro),var(--medio))}
+.section-label{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:6px;color:var(--medio)}
+.section-title{font-family:var(--ff-head);font-size:clamp(22px,3vw,31px);font-weight:700;line-height:1.2}
+.section-desc{margin-top:6px;font-size:14px;font-style:italic;color:var(--ink-faint)}
+
+.prosa{max-width:66ch}
+.prosa p{margin-bottom:1.05em}
+.prosa p:last-child{margin-bottom:0}
+.prosa ul{margin:0 0 1.05em 1.2em;padding:0}
+.prosa ul:last-child{margin-bottom:0}
+.prosa li{margin-bottom:.5em;padding-left:.35em}
+.prosa li::marker{color:var(--gold)}
+.prosa em{font-style:italic;color:var(--ink)}
+.prosa .legge{border-left:3px solid var(--gold);padding:1px 0 1px 15px;font-size:14px;
+  font-style:italic;color:var(--ink-faint)}
+.avanti{display:inline-block;margin-top:34px;padding:13px 26px;background:var(--ink);color:var(--cream);
+  text-decoration:none;font-family:var(--ff-mono);font-size:12px;letter-spacing:.1em;border-radius:3px}
+.avanti:hover{background:var(--ink-soft)}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+.cards-grid.larghe{grid-template-columns:repeat(auto-fill,minmax(400px,1fr))}
+.card{background:#fff;border-radius:4px;border:1px solid var(--border);box-shadow:var(--shadow);
+  display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .25s,transform .25s}
+.js .card{opacity:0;transform:translateY(18px)}
+.js .card.visible{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease,box-shadow .25s}
+.card:hover,.js .card.visible:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(28,26,22,.13)}
+.card.hidden{display:none}
+.card-top{height:5px;flex-shrink:0;background:linear-gradient(90deg,var(--scuro),var(--medio))}
+.card-body{padding:24px 24px 18px;flex:1;display:flex;flex-direction:column;gap:14px}
+.card-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+  padding:3px 9px;border-radius:2px;white-space:nowrap}
+.tag-codice{background:var(--scuro);color:#fff}
+.tag-ore{background:var(--chiaro);color:var(--scuro)}
+.tag-periodo{background:var(--cream-dark);color:var(--ink-soft)}
+.card-title{font-family:var(--ff-head);font-size:22px;font-weight:700;line-height:1.18}
+.card-ente{margin-top:-8px;font-size:13.5px;font-style:italic;color:var(--ink-faint)}
+.card-divider{height:1px;background:var(--border)}
+.card-desc{font-size:14.5px;line-height:1.8;color:var(--ink-soft);flex:1;max-width:none}
+.card-foot{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);border-top:1px dashed var(--border);padding-top:11px}
+
+.info{margin-top:64px;padding:34px 36px;background:var(--ink);border-radius:4px;color:var(--cream)}
+.info h3{font-family:var(--ff-head);font-size:19px;font-weight:700;font-style:italic;color:var(--gold);margin-bottom:22px}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.passo{border-left:3px solid var(--gold);padding-left:15px}
+.passo-n{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px}
+.passo p{font-size:13.5px;line-height:1.7;color:rgba(247,243,236,.82)}
+.passo p+p{margin-top:.6em}
+.info-contatto{margin-top:24px;padding-top:18px;border-top:1px solid rgba(247,243,236,.15);
+  font-size:13px;color:rgba(247,243,236,.62)}
+.info-contatto a{color:var(--gold)}
+
+footer{text-align:center;padding:32px 20px;font-family:var(--ff-mono);font-size:11px;
+  letter-spacing:.08em;color:var(--ink-faint);border-top:1px solid var(--border)}
+
+@media(max-width:760px){.info-grid{grid-template-columns:1fr}.cards-grid.larghe{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .masthead-inner,.masthead.interna .masthead-inner{grid-template-columns:1fr;padding:40px 20px 32px}
+  .masthead-meta{text-align:left}
+  .main{padding:0 16px 60px}
+  .notice-bar{padding:10px 16px;text-align:left}
+  .nav-sito a{padding:12px 14px;font-size:10.5px}
+  .info{padding:26px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .card{opacity:1;transform:none}
+  .card,.card:hover,.js .card.visible,.js .card.visible:hover{transition:none;transform:none}
+}
+@media print{
+  .nav-sito,.cerca,.filtri,.notice-bar,.avanti{display:none}
+  .card{break-inside:avoid;box-shadow:none}
+  .masthead::before{display:none}
+  .prosa{max-width:none}
+}
+.a-ART{--scuro:#8c2a2a;--medio:#b84040;--chiaro:#f8efef}
+.a-CUL{--scuro:#5a2d6e;--medio:#7b4b90;--chiaro:#f3eef6}
+.a-ECO{--scuro:#1f3864;--medio:#36598f;--chiaro:#edf1f8}
+.a-EDU{--scuro:#8f4a17;--medio:#b8662b;--chiaro:#faf1e9}
+.a-MED{--scuro:#0f5c61;--medio:#2b8187;--chiaro:#eaf5f5}
+.a-SCI{--scuro:#1e4d35;--medio:#2e7050;--chiaro:#edf5f0}
+</style>
+</head>
+<body>
+
+<header class="masthead interna">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-kicker">Liceo Classico Vittorio Alfieri · a.s. 2026/27</div>
+      <h1>I <em>percorsi</em> di quest'anno</h1>
+      <p class="masthead-sub">Da scegliere in ordine di preferenza — classi quarte e quinte</p>
+    </div>
+    <div class="masthead-meta">
+      <strong>23</strong>
+      percorsi da leggere<br>
+      6 aree tematiche<br>
+      201 posti in tutto
+    </div>
+  </div>
+  <div class="banda"><span style="background:#b84040"></span><span style="background:#7b4b90"></span><span style="background:#36598f"></span><span style="background:#b8662b"></span><span style="background:#2b8187"></span><span style="background:#2e7050"></span></div>
+</header>
+
+<nav class="nav-sito"><div class="nav-sito-inner">
+  <a href="index.html" data-pagina="index.html">Che cos&#39;è</a>
+  <a href="regole.html" data-pagina="regole.html">Come funziona</a>
+  <a href="terze.html" data-pagina="terze.html">FSL di classe · terze</a>
+  <a href="percorsi.html" data-pagina="percorsi.html" class="qui" aria-current="page">I percorsi · quarte e quinte</a>
+</div></nav>
+
+<div class="notice-bar">Leggi le schede, poi compila il modulo con il <strong>link personale</strong> che hai ricevuto per email · Indica <strong>tre percorsi</strong> in ordine di preferenza</div>
+
+<main class="main">
+  <div class="filtri">
+    <button class="filtro active" style="--c:var(--gold)" onclick="filtra('all',this)">Tutte le aree</button>
+    <button class="filtro" style="--c:#b84040" onclick="filtra('ART',this)">Artistica</button>
+    <button class="filtro" style="--c:#7b4b90" onclick="filtra('CUL',this)">Culturale</button>
+    <button class="filtro" style="--c:#36598f" onclick="filtra('ECO',this)">Economico-giuridica</button>
+    <button class="filtro" style="--c:#b8662b" onclick="filtra('EDU',this)">Educativa</button>
+    <button class="filtro" style="--c:#2b8187" onclick="filtra('MED',this)">Medico-sanitaria</button>
+    <button class="filtro" style="--c:#2e7050" onclick="filtra('SCI',this)">Scientifica</button>
+  </div>
+  <div class="cerca">
+    <input type="search" id="cerca" oninput="applica()" aria-label="Cerca un percorso"
+           placeholder="Cerca per titolo, codice o parola chiave">
+  </div>
+  <p class="nessuno" id="nessuno" hidden>Nessun percorso corrisponde alla ricerca.</p>
+
+  <section class="area a-ART" data-area="ART" id="art">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">ART</div>
+        <h2 class="section-title">Area artistica</h2>
+        <div class="section-desc">1 percorso · 15 posti · 30 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="ART" data-testo="art-01 progetto murales - coloriamo la scuola artistica il progetto si pone come occasione per portare gli alunni a vivere esperienze significative in campo artistico attraverso un coinvolgimento creativo ed un approccio pratico-espressivo. verranno realizzati murales ispirati agli artisti e alle avanguardie del novecento che decorreranno i piani della scuola novembre-aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ART-01</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">novembre-aprile</span></div>
+          <h3 class="card-title">Progetto murales - coloriamo la scuola</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Il progetto si pone come occasione per portare gli alunni a vivere esperienze significative in campo artistico attraverso un coinvolgimento creativo ed un approccio pratico-espressivo. Verranno realizzati murales ispirati agli artisti e alle Avanguardie del Novecento che decorreranno i piani della scuola</p></div>
+          <div class="card-foot">15 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-CUL" data-area="CUL" id="cul">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">CUL</div>
+        <h2 class="section-title">Area culturale</h2>
+        <div class="section-desc">3 percorsi · 45 posti · 20 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="CUL" data-testo="cul-01 biblioteca 2.0 culturale corso di formazione per la catalogazione digitale del patrimonio librario della scuola con sistema internazionale dewey. dicembre-maggio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">CUL-01</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">dicembre-maggio</span></div>
+          <h3 class="card-title">Biblioteca 2.0</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Corso di formazione per la catalogazione digitale del patrimonio librario della scuola con sistema internazionale Dewey.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="CUL" data-testo="cul-02 racconti di un moderno passato culturale laboratorio di ricerca storica sui materiali dell&#39;archivio e della biblioteca del liceo alfieri. gennaio-aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">CUL-02</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">gennaio-aprile</span></div>
+          <h3 class="card-title">Racconti di un moderno passato</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Laboratorio di ricerca storica sui materiali dell&#39;archivio e della biblioteca del liceo Alfieri.</p></div>
+          <div class="card-foot">20 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="CUL" data-testo="cul-03 dibattito e cittadinanza culturale finalita: sviluppo delle competenze comunicative e argomentative ai fini della promozione di una cittadinanza attiva. attivita: - breve introduzione all&#39;argomentazione e ai format di dibattito; - pratica: studio delle mozioni ed elaborazione delle argomentazioni; - partecipazione a gare e tornei. ottobre-aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">CUL-03</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">ottobre-aprile</span></div>
+          <h3 class="card-title">Dibattito e cittadinanza</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Finalità: sviluppo delle competenze comunicative e argomentative ai fini della promozione di una cittadinanza attiva. Attività: - breve introduzione all&#39;argomentazione e ai format di dibattito; - pratica: studio delle mozioni ed elaborazione delle argomentazioni; - partecipazione a gare e tornei.</p></div>
+          <div class="card-foot">15 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-ECO" data-area="ECO" id="eco">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">ECO</div>
+        <h2 class="section-title">Area economico-giuridica</h2>
+        <div class="section-desc">2 percorsi · 27 posti · da 20 a 25 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="ECO" data-testo="eco-01 banca d&#39;italia economico-giuridica contenuti: individuare alcuni temi di educazione finanziaria presenti nei classici della letteratura, approfondirli e preparare una relazione sugli argomenti esaminati da presentare ai coetanei. gennaio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ECO-01</span><span class="tag tag-ore">25 ore</span><span class="tag tag-periodo">gennaio</span></div>
+          <h3 class="card-title">Banca d&#39;Italia</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Contenuti: individuare alcuni temi di educazione finanziaria presenti nei classici della letteratura, approfondirli e preparare una relazione sugli argomenti esaminati da presentare ai coetanei.</p></div>
+          <div class="card-foot">12 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="ECO" data-testo="eco-02 il diritto: esperienze, racconti e contaminazioni economico-giuridica asse tematico principale sara, naturalmente, il mondo del diritto e delle sue applicazioni. le declinazioni di tale tema, tuttavia, saranno molto diversificate interessando differenti ambiti: il carcere, la parita di genere, i diritti costituzionali, etc. a titolo esemplificativo, sono in corso di definizione e calendarizzazione, incontri su: donne e arte, le grandi riforme degli anni settanta, diritto e letteratura. verra fornito un contatto e mail per comunicare con congruo anticipo la propria partecipazione ottobre-maggio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">ECO-02</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">ottobre-maggio</span></div>
+          <h3 class="card-title">Il diritto: esperienze, racconti e contaminazioni</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Asse tematico principale sarà, naturalmente, il mondo del diritto e delle sue applicazioni. Le declinazioni di tale tema, tuttavia, saranno molto diversificate interessando differenti ambiti: il carcere, la parità di genere, i diritti costituzionali, etc. A titolo esemplificativo, sono in corso di definizione e calendarizzazione, incontri su: Donne e arte, Le grandi riforme degli anni Settanta, Diritto e letteratura. Verrà fornito un contatto e mail per comunicare con congruo anticipo la propria partecipazione</p></div>
+          <div class="card-foot">15 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-EDU" data-area="EDU" id="edu">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">EDU</div>
+        <h2 class="section-title">Area educativa e del terzo settore</h2>
+        <div class="section-desc">4 percorsi · 34 posti · da 15 a 30 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="EDU" data-testo="edu-01 peer2peer educativa e del terzo settore tutoraggio di studenti di 4 liceo nei confronti di studenti di ginnasio finalizzato al recupero di latino e greco. dicembre-aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">EDU-01</span><span class="tag tag-ore">15 ore</span><span class="tag tag-periodo">dicembre-aprile</span></div>
+          <h3 class="card-title">Peer2Peer</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Tutoraggio di studenti di 4 liceo nei confronti di studenti di ginnasio finalizzato al recupero di latino e greco.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="EDU" data-testo="edu-02 noialfonso educativa e del terzo settore dopo scuola elementari e medie: attivita di sostegno scolastico per i bambini di elementari e medie di borgata parella. ottobre-giugno">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">EDU-02</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">ottobre-giugno</span></div>
+          <h3 class="card-title">NOIAlfonso</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Dopo scuola elementari e medie: attività di sostegno scolastico per i bambini di elementari e medie di borgata Parella.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="EDU" data-testo="edu-03 noinizza educativa e del terzo settore il percorso ha durata annuale e prevede un impegno a settimane alterne per aiutare nei compiti i bambini della zona di san salvario. lo studio sara accompagnato da alcuni momenti di gioco. ottobre-giugno">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">EDU-03</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">ottobre-giugno</span></div>
+          <h3 class="card-title">NOINizza</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Il percorso ha durata annuale e prevede un impegno a settimane alterne per aiutare nei compiti i bambini della zona di San Salvario. Lo studio sarà accompagnato da alcuni momenti di gioco.</p></div>
+          <div class="card-foot">8 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="EDU" data-testo="edu-04 sabato ragazzi educativa e del terzo settore sabato ragazzi: il percorso prevede l&#39;animazione di studenti di scuola elementare e media 3 sabati al mese per un bimestre nella zona san salvario. ogni mese ci sara anche un incontro di formazione sulle attivita di animazione. ottobre-giugno">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">EDU-04</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">ottobre-giugno</span></div>
+          <h3 class="card-title">Sabato ragazzi</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Sabato ragazzi: il percorso prevede l&#39;animazione di studenti di scuola elementare e media 3 sabati al mese per un bimestre nella zona San Salvario. Ogni mese ci sarà anche un incontro di formazione sulle attività di animazione.</p></div>
+          <div class="card-foot">6 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-MED" data-area="MED" id="med">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">MED</div>
+        <h2 class="section-title">Area medico-sanitaria</h2>
+        <div class="section-desc">6 percorsi · 45 posti · da 20 a 60 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="MED" data-testo="med-01 faro medico-sanitaria la faro offre agli studenti un percorso formativo esperienziale sul campo, interattivo e mirato alla partecipazione, con lo scopo di avvicinare gli studenti al lavoro concreto nell’ambito di un’organizzazione del terzo settore che nello specifico eroga servizi di cura alla persona, specializzati in cure palliative. il percorso teorico/esperienziale si muove nell’approfondimento dei seguenti temi: la storia delle c.p e l’approfondimento degli assunti di riferimento, i ruoli e le figure professionali che la compongono e le traiettorie di base che ne orientano il lavoro, la descrizione dell’organizzazione della fondazione faro. gennaio-aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-01</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio-aprile</span></div>
+          <h3 class="card-title">FARO</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>La Faro offre agli studenti un percorso formativo esperienziale sul campo, interattivo e mirato alla partecipazione, con lo scopo di avvicinare gli studenti al lavoro concreto nell’ambito di un’organizzazione del terzo settore che nello specifico eroga servizi di cura alla persona, specializzati in cure palliative. Il percorso teorico/esperienziale si muove nell’approfondimento dei seguenti temi: la storia delle C.P e l’approfondimento degli assunti di riferimento, i ruoli e le figure professionali che la compongono e le traiettorie di base che ne orientano il lavoro, la descrizione dell’organizzazione della Fondazione FARO.</p></div>
+          <div class="card-foot">4 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="MED" data-testo="med-02 ospedale cottolengo medico-sanitaria la professione medica: gli studenti visiteranno i reparti dell&#39;ospedale mauriziano e conosceranno le principali figure professionali sanitarie che operano sul campo. gennaio-aprile">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-02</span><span class="tag tag-ore">20 ore</span><span class="tag tag-periodo">gennaio-aprile</span></div>
+          <h3 class="card-title">Ospedale Cottolengo</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>La professione medica: Gli studenti visiteranno i reparti dell&#39;Ospedale Mauriziano e conosceranno le principali figure professionali sanitarie che operano sul campo.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="MED" data-testo="med-03 centro veterinario raffaello medico-sanitaria la professione veterinaria: gli studenti assisteranno e parteciperanno attivamente al lavoro di veterinario in un ambulatorio medico-privato dove si effettuano visite , terapie e analisi di laboratorio. giugno-settembre">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-03</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">giugno-settembre</span></div>
+          <h3 class="card-title">Centro Veterinario Raffaello</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>La professione veterinaria: gli studenti assisteranno e parteciperanno attivamente al lavoro di veterinario in un ambulatorio medico-privato dove si effettuano visite , terapie e analisi di laboratorio.</p></div>
+          <div class="card-foot">10 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="MED" data-testo="med-04 apicoltura medico-sanitaria conoscere il mondo delle api giugno-agosto">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-04</span><span class="tag tag-ore">60 ore</span><span class="tag tag-periodo">giugno-agosto</span></div>
+          <h3 class="card-title">Apicoltura</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Conoscere il mondo delle api</p></div>
+          <div class="card-foot">4 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="MED" data-testo="med-05 laboratorio sulle microplastiche medico-sanitaria analizzare le microplastiche giugno-agosto">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-05</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">giugno-agosto</span></div>
+          <h3 class="card-title">Laboratorio sulle microplastiche</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Analizzare le microplastiche</p></div>
+          <div class="card-foot">2 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="MED" data-testo="med-06 impariamo insieme a salvarli medico-sanitaria per la salvaguardia dei selvatici in difficolta giugno-agosto">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">MED-06</span><span class="tag tag-ore">60 ore</span><span class="tag tag-periodo">giugno-agosto</span></div>
+          <h3 class="card-title">Impariamo insieme a salvarli</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Per la salvaguardia dei selvatici in difficoltà</p></div>
+          <div class="card-foot">15 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="area a-SCI" data-area="SCI" id="sci">
+    <div class="section-header">
+      <div class="section-stripe"></div>
+      <div>
+        <div class="section-label">SCI</div>
+        <h2 class="section-title">Area scientifico-tecnologica</h2>
+        <div class="section-desc">7 percorsi · 35 posti · da 15 a 40 ore</div>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <article class="card" data-area="SCI" data-testo="sci-01 stampa 3d tra fantasia e realta industriale scientifico-tecnologica la fabbricazione additiva (additive manufacturing), nota anche con il termine di stampa 3d, e una delle tecnologie abilitanti del piano di industria 4.0 e da diversi anni sta assumendo un ruolo sempre piu importante nell’ambito della manifattura sostenibile di componenti in materiale metallico e polimerico. febbraio-marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-01</span><span class="tag tag-ore">15 ore</span><span class="tag tag-periodo">febbraio-marzo</span></div>
+          <h3 class="card-title">Stampa 3D tra fantasia e realtà industriale</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>La fabbricazione additiva (Additive Manufacturing), nota anche con il termine di Stampa 3D, è una delle tecnologie abilitanti del piano di Industria 4.0 e da diversi anni sta assumendo un ruolo sempre più importante nell’ambito della manifattura sostenibile di componenti in materiale metallico e polimerico.</p></div>
+          <div class="card-foot">2 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-02 reverse engineering scientifico-tecnologica l’approccio inverso dall’oggetto fisico al modello virtuale: la reverse engineering e una disciplina che consente di rilevare la geometria e di analizzare le funzioni di un oggetto reale, ottenendo i dati digitali che possono essere impiegati per progettare e produrre una replica o un pezzo simile con funzionamento e prestazioni analoghe o migliori. il progetto prevede di presentare metodologie e strumenti che consentano di digitalizzare oggetti fisici per ottenere dati digitali relativi alla loro geometria (forma e dimensioni). gennaio-febbraio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-02</span><span class="tag tag-ore">18 ore</span><span class="tag tag-periodo">gennaio-febbraio</span></div>
+          <h3 class="card-title">Reverse engineering</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>L’approccio inverso dall’oggetto fisico al modello virtuale: La Reverse Engineering è una disciplina che consente di rilevare la geometria e di analizzare le funzioni di un oggetto reale, ottenendo i dati digitali che possono essere impiegati per progettare e produrre una replica o un pezzo simile con funzionamento e prestazioni analoghe o migliori. Il progetto prevede di presentare metodologie e strumenti che consentano di digitalizzare oggetti fisici per ottenere dati digitali relativi alla loro geometria (forma e dimensioni).</p></div>
+          <div class="card-foot">4 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-03 la matematica delle reti, dei giochi e dell’intelligenza artificiale scientifico-tecnologica il corso, proposto dal gruppo di ricerca in analisi e controllo dei sistemi dinamici del dipartimento di scienze matematiche “g. l. lagrange” del politecnico di torino e supportato dal progetto smaile, intende presentare le basi matematiche per comprendere la teoria dei grafi, la teoria dei giochi, le dinamiche su rete e l’intelligenza artificiale. l’obiettivo e di avvicinare gli studenti e le studentesse al mondo universitario e di introdurre la modellazione di realta quotidiane con metodi matematici. gennaio-marzo">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-03</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio-marzo</span></div>
+          <h3 class="card-title">La matematica delle reti, dei giochi e dell’intelligenza artificiale</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Il corso, proposto dal gruppo di ricerca in Analisi e Controllo dei Sistemi Dinamici del Dipartimento di Scienze Matematiche “G. L. Lagrange” del Politecnico di Torino e supportato dal progetto SMaILE, intende presentare le basi matematiche per comprendere la teoria dei grafi, la teoria dei giochi, le dinamiche su rete e l’intelligenza artificiale. L’obiettivo è di avvicinare gli studenti e le studentesse al mondo universitario e di introdurre la modellazione di realtà quotidiane con metodi matematici.</p></div>
+          <div class="card-foot">2 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-04 matematica e medicina scientifico-tecnologica modelli matematici, simulazioni numeriche e statistica a supporto della ricerca e del progresso in ambito biomedico: la matematica e un prezioso strumento per spiegare e predire l’evoluzione di molti fenomeni che ci circondano e negli ultimi decenni ha acquisito un ruolo fondamentale nella ricerca in ambito biologico e medico. il progetto si articola in 2 moduli, che vanno a descrivere due aspetti fondamentali e complementari per la ricerca matematica in biologia: modellistica e simulazione in medicina e biologia e statistica per le prove cliniche gennaio-febbraio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-04</span><span class="tag tag-ore">15 ore</span><span class="tag tag-periodo">gennaio-febbraio</span></div>
+          <h3 class="card-title">Matematica e Medicina</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Modelli matematici, simulazioni numeriche e statistica a supporto della ricerca e del progresso in ambito biomedico: La matematica è un prezioso strumento per spiegare e predire l’evoluzione di molti fenomeni che ci circondano e negli ultimi decenni ha acquisito un ruolo fondamentale nella ricerca in ambito biologico e medico. Il progetto si articola in 2 moduli, che vanno a descrivere due aspetti fondamentali e complementari per la ricerca matematica in biologia: Modellistica e simulazione in medicina e biologia e Statistica per le prove cliniche</p></div>
+          <div class="card-foot">3 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-05 introduzione al magico mondo della 3d computer animation scientifico-tecnologica la computer animation e largamente diffusa per produrre pubblicita, corti e film di animazione. in particolare, l&#39;animazione 3d riveste un ruolo chiave sia per l&#39;industria dell&#39;intrattenimento sia per le produzioni multimediali. l&#39;animazione 3d e anche propedeutica allo sviluppo di applicazioni di realta virtuale e aumentata. il corso ha l’obiettivo di introdurre gli/le studenti alle tecniche di modellazione e animazione per la produzione al calcolatore di video e animazioni 3d. gennaio-febbraio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-05</span><span class="tag tag-ore">15 ore</span><span class="tag tag-periodo">gennaio-febbraio</span></div>
+          <h3 class="card-title">Introduzione al Magico Mondo della 3D Computer Animation</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>La computer animation è largamente diffusa per produrre pubblicità, corti e film di animazione. In particolare, l&#39;animazione 3D riveste un ruolo chiave sia per l&#39;industria dell&#39;intrattenimento sia per le produzioni multimediali. L&#39;animazione 3D è anche propedeutica allo sviluppo di applicazioni di realtà virtuale e aumentata. Il corso ha l’obiettivo di introdurre gli/le studenti alle tecniche di modellazione e animazione per la produzione al calcolatore di video e animazioni 3D.</p></div>
+          <div class="card-foot">3 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-06 dentro l’intelligenza artificiale scientifico-tecnologica grazie a questo corso scoprirai come funziona un sistema artificiale intelligente, come lo si programma, come lo si progetta e come la sua intelligenza interagisce con il mondo esterno. diventerai un mago-elfico, esperto cioe di elettronica fisica comunicazioni, con capacita di programmazione, competenze abilitanti per l’intelligenza artificiale. gennaio-febbraio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-06</span><span class="tag tag-ore">30 ore</span><span class="tag tag-periodo">gennaio-febbraio</span></div>
+          <h3 class="card-title">Dentro l’Intelligenza Artificiale</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Grazie a questo corso scoprirai come funziona un sistema artificiale intelligente, come lo si programma, come lo si progetta e come la sua intelligenza interagisce con il mondo esterno. Diventerai un Mago-ELFICO, esperto cioè di ELettronica FIsica Comunicazioni, con capacità di programmazione, competenze abilitanti per l’Intelligenza Artificiale.</p></div>
+          <div class="card-foot">12 posti</div>
+        </div>
+      </article>
+      <article class="card" data-area="SCI" data-testo="sci-07 giocare e programmare con i robot scientifico-tecnologica scoprirai come funziona un sistema robotico, come lo si programma, progetta e controlla, e come l’elettronica e la sensoristica ne determinano l’interazione con il mondo esterno. e soprattutto imparerai a giocare con la robotica. diventerai un mago-robotico-elfico, esperto cioe di elettronica fisica comunicazioni con capacita di programmazione, controllo e meccanica, tutte competenze abilitanti per la robotica. lavoreremo in tre fasi principali: imparo, faccio, mostro. gennaio-febbraio">
+        <div class="card-top"></div>
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-codice">SCI-07</span><span class="tag tag-ore">40 ore</span><span class="tag tag-periodo">gennaio-febbraio</span></div>
+          <h3 class="card-title">GIocare e proGrammare con i ROBOt</h3>
+          <div class="card-divider"></div>
+          <div class="card-desc prosa"><p>Scoprirai come funziona un sistema robotico, come lo si programma, progetta e controlla, e come l’elettronica e la sensoristica ne determinano l’interazione con il mondo esterno. E soprattutto imparerai a giocare con la robotica. Diventerai un Mago-Robotico-ELFICO, esperto cioè di ELettronica FIsica COmunicazioni con capacità di programmazione, controllo e meccanica, tutte competenze abilitanti per la ROBOTICA. Lavoreremo in tre fasi principali: IMPARO, FACCIO, MOSTRO.</p></div>
+          <div class="card-foot">9 posti</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="info">
+    <h3>Come si sceglie, e come viene assegnato</h3>
+    <div class="info-grid">
+      <div class="passo">
+        <div class="passo-n">Leggi</div>
+        <p>Guarda tutte le schede, anche quelle delle aree che non avresti considerato. Il codice in alto a sinistra — ART-01 e simili — è quello che ritrovi nel menu del modulo.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">Scegli</div>
+        <p>Nel modulo indichi tre percorsi in ordine di preferenza, tutti diversi. Al secondo e al terzo posto metti percorsi che faresti davvero: può capitare di non poter utilizzare la prima scelta.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-n">L'assegnazione</div>
+        <p>Riceverai un percorso solo. La scuola cerca prima di tutto di dare a ciascuno uno dei percorsi indicati.</p>
+        <p>Chi non compila il modulo viene inserito d'ufficio dove restano posti liberi.</p>
+      </div>
+    </div>
+    
+  </div>
+</main>
+
+<footer>Liceo Classico Vittorio Alfieri · Formazione Scuola-Lavoro 2026/27 · pagina aggiornata il 23/09/2026</footer>
+
+<script>
+var areaAttiva = 'all';
+function pulisci(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+function filtra(a,btn){
+  areaAttiva=a;
+  document.querySelectorAll('.filtro').forEach(function(b){b.classList.toggle('active',b===btn);});
+  applica();
+}
+function applica(){
+  var campo=document.getElementById('cerca');
+  var q=campo?pulisci(campo.value.trim()):'';
+  var visibili=0;
+  document.querySelectorAll('.card[data-area]').forEach(function(c){
+    var ok=(areaAttiva==='all'||c.dataset.area===areaAttiva)&&(!q||c.dataset.testo.indexOf(q)>=0);
+    c.classList.toggle('hidden',!ok);
+    if(ok){visibili++;c.classList.add('visible');}
+  });
+  document.querySelectorAll('section.area').forEach(function(s){
+    s.hidden=!s.querySelector('.card:not(.hidden)');
+  });
+  var vuoto=document.getElementById('nessuno');
+  if(vuoto)vuoto.hidden=visibili>0;
+}
+(function(){
+  var carte=document.querySelectorAll('.card');
+  if(!('IntersectionObserver' in window)){
+    carte.forEach(function(c){c.classList.add('visible');});
+    return;
+  }
+  var oss=new IntersectionObserver(function(voci){
+    voci.forEach(function(v){
+      if(!v.isIntersecting)return;
+      var c=v.target;
+      setTimeout(function(){c.classList.add('visible');},Number(c.dataset.ritardo||0));
+      oss.unobserve(c);
+    });
+  },{threshold:0.08});
+  carte.forEach(function(c,i){c.dataset.ritardo=(i%3)*80;oss.observe(c);});
+})();
+</script>
+</body>
+</html>
